@@ -11,3 +11,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.router {
+
+}
+
+.color {
+  /* background-color: {props.color}; */
+}
+
+.name {
+  background-color: peachpuff;
+}

@@ -1,23 +1,22 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import {Router,Link} from "@reach/router";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Num from './components/Num';
+import Color from './components/Color'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" style={{backgroundColor: "whitesmoke"}}>
+      <div className="d-flex col-8 mx-auto justify-content-around">
+        <Link to='/'>Home</Link>
+        <Link to= '/num'>Name</Link>
+        <Link to='/word/color/bgc'>Color</Link>
+      </div>
+      <Router >
+        <Num path=":num" />
+        <Color path=":word/:color/:bgc" />
+      </Router>
     </div>
   );
 }
